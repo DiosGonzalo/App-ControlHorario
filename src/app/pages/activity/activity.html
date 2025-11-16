@@ -1,0 +1,172 @@
+<div class="container-fluid p-4" style="background-color: #1f2a40; min-height: 100vh;">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="text-white mb-1">Activity Log</h1>
+            <p class="text-secondary mb-0">Track all system events and audit user actions</p>
+        </div>
+        <button class="btn text-white" style="background-color: #3b5998;">
+            <i class="bi bi-download me-1"></i> Export Log
+        </button>
+    </div>
+
+    <div class="row g-4 mb-4">
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #4CAF50; opacity: 0.8;">
+                    <i class="bi bi-calendar-event fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Today's Events</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #3b5998; opacity: 0.8;">
+                    <i class="bi bi-people fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Active Users</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #DC3545; opacity: 0.8;">
+                    <i class="bi bi-shield-lock-fill fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Security Events</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #FFC107; opacity: 0.8;">
+                    <i class="bi bi-gear-fill fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Config Changes</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+        <form class="needs-validation" novalidate>
+            <div class="input-group">
+                <span class="input-group-text" style="background-color: #1f2a40; border-color: #3b5070;">
+                    <i class="bi bi-search text-secondary"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Search activities by user, action, or details..." aria-label="Buscar" required
+                       style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                <button class="btn btn-outline-secondary text-white" type="submit" style="border-color: #3b5070;">
+                    <i class="bi bi-funnel me-1"></i> Filter
+                </button>
+                <div class="invalid-feedback">
+                    El campo de búsqueda es requerido para filtrar.
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="card p-4 shadow-sm" style="background-color: #2a3c58; border: none;">
+        <div class="list-group list-group-flush">
+            
+            <div class="list-group-item d-flex align-items-start p-3" style="background-color: #2a3c58; border-color: #3b5070;">
+                <div class="me-3 p-2 rounded-circle text-center" style="width: 36px; height: 36px; background-color: #4CAF50;">
+                    <i class="bi bi-check-circle-fill text-white fs-5"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6 class="mb-1 text-white">
+                            Event Title
+                            <span class="badge bg-success ms-2">SUCCESS</span>
+                        </h6>
+                        <small class="text-muted">Timestamp</small>
+                    </div>
+                    <small class="text-muted d-block">Details: Location, Device, Data</small>
+                    <small class="text-muted">
+                        <i class="bi bi-person-fill"></i> User Name
+                        <span class="mx-2">|</span>
+                        <i class="bi bi-calendar"></i> Date
+                    </small>
+                </div>
+            </div>
+
+            <div class="list-group-item d-flex align-items-start p-3" style="background-color: #2a3c58; border-color: #3b5070;">
+                <div class="me-3 p-2 rounded-circle text-center" style="width: 36px; height: 36px; background-color: #007bff;">
+                    <i class="bi bi-gear-fill text-white fs-5"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6 class="mb-1 text-white">
+                            Event Title
+                            <span class="badge bg-info text-dark ms-2">INFO</span>
+                        </h6>
+                        <small class="text-muted">Timestamp</small>
+                    </div>
+                    <small class="text-muted d-block">Details: Settings changed or schedule created</small>
+                    <small class="text-muted">
+                        <i class="bi bi-person-fill"></i> User Name
+                        <span class="mx-2">|</span>
+                        <i class="bi bi-calendar"></i> Date
+                    </small>
+                </div>
+            </div>
+            
+            <div class="list-group-item d-flex align-items-start p-3" style="background-color: #2a3c58; border-color: #3b5070;">
+                <div class="me-3 p-2 rounded-circle text-center" style="width: 36px; height: 36px; background-color: #FFC107;">
+                    <i class="bi bi-exclamation-triangle-fill text-white fs-5"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6 class="mb-1 text-white">
+                            Event Title
+                            <span class="badge bg-warning text-dark ms-2">WARNING</span>
+                        </h6>
+                        <small class="text-muted">Timestamp</small>
+                    </div>
+                    <small class="text-muted d-block">Details: Old Role to New Role</small>
+                    <small class="text-muted">
+                        <i class="bi bi-person-fill"></i> User Name
+                        <span class="mx-2">|</span>
+                        <i class="bi bi-calendar"></i> Date
+                    </small>
+                </div>
+            </div>
+            
+            <div class="list-group-item d-flex align-items-start p-3" style="background-color: #2a3c58; border-color: #3b5070;">
+                <div class="me-3 p-2 rounded-circle text-center" style="width: 36px; height: 36px; background-color: #6c757d;">
+                    <i class="bi bi-box-arrow-right text-white fs-5"></i>
+                </div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h6 class="mb-1 text-white">
+                            Event Title
+                            <span class="badge bg-secondary ms-2">INFO</span>
+                        </h6>
+                        <small class="text-muted">Timestamp</small>
+                    </div>
+                    <small class="text-muted d-block">Details: Location, Duration</small>
+                    <small class="text-muted">
+                        <i class="bi bi-person-fill"></i> User Name
+                        <span class="mx-2">|</span>
+                        <i class="bi bi-calendar"></i> Date
+                    </small>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</div>

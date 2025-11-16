@@ -1,0 +1,123 @@
+<nav id="sidebarMenu" class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px; min-height: 100vh;">
+    <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none border-bottom pb-3">
+        <img src="path/to/your/logo.png" alt="Logo" class="rounded-circle me-2" style="width: 40px; height: 40px;">
+        <span class="fs-5 fw-semibold">AppName</span>
+    </div>
+
+    <!-- Added: estilos para la opción seleccionada -->
+    <style>
+        /* Estilo para la opción seleccionada; usa !important para sobrescribir inline */
+        .nav-link.selected,
+        .nav-link.selected i {
+            background-color: #ff6f61 !important; /* color de ejemplo: naranja/rojo suave */
+            color: #ffffff !important;
+            border-radius: 8px;
+        }
+        /* Asegura que el icono también cambie de color */
+        .nav-link.selected .bi {
+            color: #ffffff !important;
+        }
+    </style>
+
+    <ul class="nav nav-pills flex-column mb-auto mt-3">
+        <li class="nav-item mb-2">
+            <a href="/dashboard" class="nav-link active" aria-current="page" style="background-color: #3b5998; border-radius: 8px;">
+                <i class="bi bi-house-door-fill me-2"></i> Dashboard
+            </a>
+        </li>
+        
+        <li class="nav-item mb-2">
+            <a href="/modalidades" class="nav-link text-white">
+                <i class="bi bi-file-earmark-text me-2"></i> Modalidades
+            </a>
+        </li>
+        
+        <li class="nav-item mb-2">
+            <a href="/ausencias" class="nav-link text-white">
+                <i class="bi bi-x-octagon me-2"></i> Ausencias
+            </a>
+        </li>
+        
+        <li class="nav-item mb-2">
+            <a href="/departments" class="nav-link text-white">
+                <i class="bi bi-building me-2"></i> Departamentos
+            </a>
+        </li>
+
+        <li class="nav-item mb-2">
+            <a href="/users" class="nav-link text-white">
+                <i class="bi bi-people me-2"></i> Usuarios y roles
+            </a>
+        </li>
+
+        <li class="nav-item mb-2">
+            <a href="/schedules" class="nav-link text-white">
+                <i class="bi bi-calendar me-2"></i> Horarios
+            </a>
+        </li>
+        
+        <li class="nav-item mb-2">
+            <a href="/activity" class="nav-link text-white">
+                <i class="bi bi-file-earmark-bar-graph me-2"></i> Activity Log
+            </a>
+        </li>
+
+        <li class="nav-item mb-2">
+            <a href="/settings" class="nav-link text-white">
+                <i class="bi bi-gear me-2"></i> Settings
+            </a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none p-2 rounded" style="background-color: #31313a;">
+            <div class="rounded-circle text-center me-2" style="width: 32px; height: 32px; line-height: 32px; background-color: #556c7d; font-weight: bold;">AD</div>
+            <div class="flex-grow-1">
+                <strong style="display: block; line-height: 1;">Administrador</strong>
+                <small style="font-size: 0.8em; color: #aaa;">admin@company.com</small>
+            </div>
+            <i class="bi bi-box-arrow-right ms-2"></i> </a>
+    </div>
+
+    <!-- Added: script para aplicar la clase 'selected' según ruta y al click -->
+    <script>
+        (function () {
+            // Normaliza rutas (quita trailing slash)
+            function normalize(path) {
+                return path.replace(/\/+$/, '') || '/';
+            }
+
+            function markSelected() {
+                const links = document.querySelectorAll('#sidebarMenu .nav-link');
+                const current = normalize(window.location.pathname);
+                links.forEach(a => {
+                    const href = a.getAttribute('href') || '';
+                    // Considera solamente rutas internas (empiezan por /)
+                    if (href.startsWith('/')) {
+                        if (normalize(href) === current) {
+                            a.classList.add('selected');
+                        } else {
+                            a.classList.remove('selected');
+                        }
+                    }
+                });
+            }
+
+            // Marca inicialmente
+            document.addEventListener('DOMContentLoaded', function () {
+                markSelected();
+
+                // Actualiza al hacer click (útil en apps sin recarga completa)
+                const links = document.querySelectorAll('#sidebarMenu .nav-link');
+                links.forEach(a => {
+                    a.addEventListener('click', function () {
+                        links.forEach(x => x.classList.remove('selected'));
+                        this.classList.add('selected');
+                    });
+                });
+            });
+        })();
+    </script>
+</nav>

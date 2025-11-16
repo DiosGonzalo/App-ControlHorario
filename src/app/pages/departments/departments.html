@@ -1,0 +1,171 @@
+<div class="container-fluid p-4" style="background-color: #1f2a40; min-height: 100vh;">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="text-white mb-1">Gestión de Departamentos</h1>
+            <p class="text-secondary mb-0">Administra los departamentos, equipos y responsables</p>
+        </div>
+        <button class="btn text-white" style="background-color: #3b5998;" data-bs-toggle="modal" data-bs-target="#departmentModal">
+            <i class="bi bi-plus me-1"></i> Crear Departamento
+        </button>
+    </div>
+
+    <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+        <form class="needs-validation" novalidate>
+            <div class="input-group">
+                <span class="input-group-text" style="background-color: #1f2a40; border-color: #3b5070;">
+                    <i class="bi bi-search text-secondary"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Buscar por nombre de departamento o responsable..." aria-label="Buscar" required
+                       style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                <button class="btn btn-outline-secondary text-white" type="submit" style="border-color: #3b5070;">
+                    <i class="bi bi-funnel me-1"></i> Filtrar
+                </button>
+                <div class="invalid-feedback">
+                    El campo de búsqueda no puede estar vacío.
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="card p-0 shadow-sm" style="background-color: #2a3c58; border: none;">
+        <div class="table-responsive">
+            <table class="table table-borderless align-middle" style="color: white;">
+                <thead style="border-bottom: 1px solid #3b5070;">
+                    <tr>
+                        <th class="text-muted small" style="width: 30%;">Departamento</th>
+                        <th class="text-muted small" style="width: 25%;">Responsable</th>
+                        <th class="text-muted small" style="width: 15%;">Empleados</th>
+                        <th class="text-muted small" style="width: 15%;">Estado</th>
+                        <th class="text-muted small" style="width: 15%;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr style="border-bottom: 1px solid #3b5070;">
+                        <td>
+                            <strong class="d-block">Engineering</strong>
+                            <small class="text-muted">Desarrollo y mantenimiento de software</small>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle text-center me-2" style="width: 32px; height: 32px; line-height: 32px; background-color: #3b5998; font-weight: bold;">AD</div>
+                                <div>
+                                    <strong class="d-block">User Name</strong>
+                                    <small class="text-muted">email@company.com</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge bg-secondary">0</span></td>
+                        <td><span class="badge bg-success">Activo</span></td>
+                        <td>
+                            <button class="btn btn-sm text-white p-0 me-2" data-bs-toggle="modal" data-bs-target="#departmentModal" title="Editar"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm text-white p-0" title="Desactivar"><i class="bi bi-toggle-off"></i></button>
+                        </td>
+                    </tr>
+
+                    <tr style="border-bottom: 1px solid #3b5070;">
+                        <td>
+                            <strong class="d-block">Marketing</strong>
+                            <small class="text-muted">Estrategia de marca y publicidad</small>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle text-center me-2" style="width: 32px; height: 32px; line-height: 32px; background-color: #FFC107; font-weight: bold;">SC</div>
+                                <div>
+                                    <strong class="d-block">User Name</strong>
+                                    <small class="text-muted">email@company.com</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge bg-secondary">0</span></td>
+                        <td><span class="badge bg-danger">Inactivo</span></td>
+                        <td>
+                            <button class="btn btn-sm text-white p-0 me-2" data-bs-toggle="modal" data-bs-target="#departmentModal" title="Editar"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm text-white p-0" title="Activar"><i class="bi bi-toggle-on"></i></button>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <strong class="d-block">Sales</strong>
+                            <small class="text-muted">Gestión de cuentas y ventas</small>
+                        </td>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle text-center me-2" style="width: 32px; height: 32px; line-height: 32px; background-color: #4CAF50; font-weight: bold;">MC</div>
+                                <div>
+                                    <strong class="d-block">User Name</strong>
+                                    <small class="text-muted">email@company.com</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge bg-secondary">0</span></td>
+                        <td><span class="badge bg-success">Activo</span></td>
+                        <td>
+                            <button class="btn btn-sm text-white p-0 me-2" data-bs-toggle="modal" data-bs-target="#departmentModal" title="Editar"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm text-white p-0" title="Desactivar"><i class="bi bi-toggle-off"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="departmentModal" tabindex="-1" aria-labelledby="departmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #2a3c58; color: white; border: none;">
+            
+            <div class="modal-header" style="border-bottom: 1px solid #3b5070;">
+                <h5 class="modal-title" id="departmentModalLabel">Crear/Editar Departamento</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar" style="filter: invert(1);"></button>
+            </div>
+            
+            <form class="needs-validation" novalidate>
+                <div class="modal-body">
+                    
+                    <div class="mb-3">
+                        <label for="departmentName" class="form-label">Nombre del Departamento</label>
+                        <input type="text" class="form-control" id="departmentName" required 
+                               style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <div class="invalid-feedback">
+                            El nombre del departamento es obligatorio.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="departmentDescription" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="departmentDescription" rows="3"
+                                  style="background-color: #1f2a40; border-color: #3b5070; color: white;"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="departmentManager" class="form-label">Responsable del Departamento</label>
+                        <select class="form-select" id="departmentManager" required
+                                style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <option value="" disabled selected>Selecciona un responsable</option>
+                            <option value="1" style="background-color: #2a3c58;">[Empleado 1]</option>
+                            <option value="2" style="background-color: #2a3c58;">[Empleado 2]</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Debe seleccionar un responsable.
+                        </div>
+                    </div>
+                    
+                    <div class="form-check form-switch mt-4">
+                        <input class="form-check-input" type="checkbox" id="departmentStatus" checked>
+                        <label class="form-check-label" for="departmentStatus">Departamento Activo</label>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer" style="border-top: 1px solid #3b5070;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #6c757d; border: none;">Cancelar</button>
+                    <button type="submit" class="btn text-white" style="background-color: #3b5998;">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

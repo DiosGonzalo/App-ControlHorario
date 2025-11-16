@@ -1,0 +1,240 @@
+<div class="container-fluid p-4" style="background-color: #1f2a40; min-height: 100vh;">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="text-white mb-1">Schedule Management</h1>
+            <p class="text-secondary mb-0">Create and assign work schedules to employees and departments</p>
+        </div>
+        <button class="btn text-white" style="background-color: #3b5998;" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+            <i class="bi bi-plus me-1"></i> Create Schedule
+        </button>
+    </div>
+
+    <div class="row g-4 mb-4">
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #3b5998; opacity: 0.8;">
+                    <i class="bi bi-calendar-check fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Active Schedules</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #4CAF50; opacity: 0.8;">
+                    <i class="bi bi-people fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Total Assigned</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #FFC107; opacity: 0.8;">
+                    <i class="bi bi-clock fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Shift Types</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white d-flex flex-row align-items-center" style="background-color: #2a3c58; border: none;">
+                <div class="p-2 rounded-circle me-3" style="background-color: #DC3545; opacity: 0.8;">
+                    <i class="bi bi-file-earmark-copy fs-4 text-white"></i>
+                </div>
+                <div>
+                    <h5 class="mb-0 fw-bold">0</h5>
+                    <small class="text-muted">Templates</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        
+        <div class="col-lg-3">
+            <h5 class="text-white mb-3">Quick Templates</h5>
+            <div class="d-flex flex-column gap-2">
+                
+                <button class="btn text-start p-3 text-white" style="background-color: #2a3c58; border: none; outline: none;">
+                    <strong class="d-block">Template Name 1</strong>
+                    <small class="text-muted">Time Range</small>
+                </button>
+                
+                <button class="btn text-start p-3 text-white" style="background-color: #2a3c58; border: none; outline: none;">
+                    <strong class="d-block">Template Name 2</strong>
+                    <small class="text-muted">Time Range</small>
+                </button>
+                
+                <button class="btn text-start p-3 text-white" style="background-color: #2a3c58; border: none; outline: none;">
+                    <strong class="d-block">Template Name 3</strong>
+                    <small class="text-muted">Time Range</small>
+                </button>
+                
+                <button class="btn btn-outline-secondary p-3 mt-2 text-white" style="border-color: #3b5070;" data-bs-toggle="modal" data-bs-target="#templateModal">
+                    <i class="bi bi-plus me-1"></i> New Template
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <h5 class="text-white mb-3">Active Schedules</h5>
+            <div class="d-flex flex-column gap-4">
+                
+                <div class="card p-4 shadow-sm text-white" style="background-color: #2a3c58; border: none;">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h4 class="mb-0"><i class="bi bi-clock me-2 text-primary"></i> Schedule Name</h4>
+                        <button class="btn btn-sm text-muted p-0"><i class="bi bi-three-dots"></i></button>
+                    </div>
+                    
+                    <small class="text-muted mt-2">
+                        Time Range: <strong class="text-white">Start - End</strong>
+                    </small>
+                    <p class="text-muted mb-3">
+                        Assigned Employees: <strong class="text-white">0</strong>
+                    </p>
+                    
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="badge rounded-pill bg-primary">M</span>
+                        <span class="badge rounded-pill bg-primary">T</span>
+                        <span class="badge rounded-pill bg-primary">W</span>
+                        <span class="badge rounded-pill bg-primary">T</span>
+                        <span class="badge rounded-pill bg-primary">F</span>
+                        <span class="badge rounded-pill bg-secondary">S</span>
+                        <span class="badge rounded-pill bg-secondary">S</span>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2" style="border-top: 1px solid #3b5070; padding-top: 15px;">
+                        <button class="btn btn-sm text-white" style="background-color: #31313a;" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+                            <i class="bi bi-pencil-square me-1"></i> Edit
+                        </button>
+                        <button class="btn btn-sm text-white" style="background-color: #31313a;">
+                            <i class="bi bi-files me-1"></i> Duplicate
+                        </button>
+                        <button class="btn btn-sm text-danger" style="background-color: #31313a; border: 1px solid #DC3545;">
+                            <i class="bi bi-trash me-1"></i> Delete
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card p-4 shadow-sm text-white" style="background-color: #2a3c58; border: none;">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h4 class="mb-0"><i class="bi bi-clock me-2 text-success"></i> Schedule Name 2</h4>
+                        <button class="btn btn-sm text-muted p-0"><i class="bi bi-three-dots"></i></button>
+                    </div>
+                    
+                    <small class="text-muted mt-2">
+                        Time Range: <strong class="text-white">Start - End</strong>
+                    </small>
+                    <p class="text-muted mb-3">
+                        Assigned Employees: <strong class="text-white">0</strong>
+                    </p>
+                    
+                    <div class="d-flex gap-2 mb-3">
+                        <span class="badge rounded-pill bg-success">M</span>
+                        <span class="badge rounded-pill bg-secondary">T</span>
+                        <span class="badge rounded-pill bg-success">W</span>
+                        <span class="badge rounded-pill bg-secondary">T</span>
+                        <span class="badge rounded-pill bg-success">F</span>
+                        <span class="badge rounded-pill bg-secondary">S</span>
+                        <span class="badge rounded-pill bg-secondary">S</span>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2" style="border-top: 1px solid #3b5070; padding-top: 15px;">
+                        <button class="btn btn-sm text-white" style="background-color: #31313a;" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+                            <i class="bi bi-pencil-square me-1"></i> Edit
+                        </button>
+                        <button class="btn btn-sm text-white" style="background-color: #31313a;">
+                            <i class="bi bi-files me-1"></i> Duplicate
+                        </button>
+                        <button class="btn btn-sm text-danger" style="background-color: #31313a; border: 1px solid #DC3545;">
+                            <i class="bi bi-trash me-1"></i> Delete
+                        </button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #2a3c58; color: white; border: none;">
+            
+            <div class="modal-header" style="border-bottom: 1px solid #3b5070;">
+                <h5 class="modal-title" id="scheduleModalLabel">Crear/Editar Horario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar" style="filter: invert(1);"></button>
+            </div>
+            
+            <form class="needs-validation" novalidate>
+                <div class="modal-body">
+                    
+                    <div class="mb-3">
+                        <label for="scheduleName" class="form-label">Nombre del Horario</label>
+                        <input type="text" class="form-control" id="scheduleName" required 
+                               style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <div class="invalid-feedback">El nombre del horario es obligatorio.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="shiftType" class="form-label">Tipo de Horario</label>
+                        <select class="form-select" id="shiftType" required
+                                style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <option value="" disabled selected>Selecciona un tipo</option>
+                            <option value="Regular" style="background-color: #2a3c58;">Regular</option>
+                            <option value="Night" style="background-color: #2a3c58;">Noche</option>
+                        </select>
+                        <div class="invalid-feedback">Debe seleccionar un tipo de horario.</div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="startTime" class="form-label">Hora de Inicio</label>
+                            <input type="time" class="form-control" id="startTime" required 
+                                   style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <div class="invalid-feedback">Hora de inicio obligatoria.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="endTime" class="form-label">Hora de Fin</label>
+                            <input type="time" class="form-control" id="endTime" required 
+                                   style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <div class="invalid-feedback">Hora de fin obligatoria.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label d-block">Días de Trabajo</label>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-sm btn-primary">L</button>
+                            <button type="button" class="btn btn-sm btn-primary">M</button>
+                            <button type="button" class="btn btn-sm btn-primary">X</button>
+                            <button type="button" class="btn btn-sm btn-primary">J</button>
+                            <button type="button" class="btn btn-sm btn-primary">V</button>
+                            <button type="button" class="btn btn-sm btn-secondary">S</button>
+                            <button type="button" class="btn btn-sm btn-secondary">D</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer" style="border-top: 1px solid #3b5070;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #6c757d; border: none;">Cancelar</button>
+                    <button type="submit" class="btn text-white" style="background-color: #3b5998;">Guardar Horario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,217 @@
+<div class="container-fluid p-4" style="background-color: #1f2a40; min-height: 100vh;">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="text-white mb-1">Usuarios y Roles</h1>
+            <p class="text-secondary mb-0">Manage user accounts and assign roles and permissions</p>
+        </div>
+        <button class="btn text-white" style="background-color: #3b5998;" data-bs-toggle="modal" data-bs-target="#userModal">
+            <i class="bi bi-plus me-1"></i> Add User
+        </button>
+    </div>
+
+    <div class="row g-4 mb-4">
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white" style="background-color: #2a3c58; border: none;">
+                <div class="d-flex justify-content-between">
+                    <div class="p-2 rounded" style="background-color: #DC3545; opacity: 0.8;">
+                        <i class="bi bi-shield-fill fs-5 text-white"></i>
+                    </div>
+                    <button class="btn btn-sm text-muted p-0"><i class="bi bi-three-dots"></i></button>
+                </div>
+                
+                <h5 class="mt-3 mb-0">Admin</h5>
+                <small class="text-muted mb-2">Full Access</small>
+                <p class="mb-0 fw-bold">0 users</p>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white" style="background-color: #2a3c58; border: none;">
+                <div class="d-flex justify-content-between">
+                    <div class="p-2 rounded" style="background-color: #007bff; opacity: 0.8;">
+                        <i class="bi bi-shield-fill fs-5 text-white"></i>
+                    </div>
+                    <button class="btn btn-sm text-muted p-0"><i class="bi bi-three-dots"></i></button>
+                </div>
+                
+                <h5 class="mt-3 mb-0">Manager</h5>
+                <small class="text-muted mb-2">Department Management</small>
+                <p class="mb-0 fw-bold">0 users</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white" style="background-color: #2a3c58; border: none;">
+                <div class="d-flex justify-content-between">
+                    <div class="p-2 rounded" style="background-color: #4CAF50; opacity: 0.8;">
+                        <i class="bi bi-shield-fill fs-5 text-white"></i>
+                    </div>
+                    <button class="btn btn-sm text-muted p-0"><i class="bi bi-three-dots"></i></button>
+                </div>
+                
+                <h5 class="mt-3 mb-0">HR Manager</h5>
+                <small class="text-muted mb-2">Employee Management</small>
+                <p class="mb-0 fw-bold">0 users</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+            <div class="card p-3 shadow-sm h-100 text-white" style="background-color: #2a3c58; border: none;">
+                <div class="d-flex justify-content-between">
+                    <div class="p-2 rounded" style="background-color: #6c757d; opacity: 0.8;">
+                        <i class="bi bi-shield-fill fs-5 text-white"></i>
+                    </div>
+                    <button class="btn btn-sm text-muted p-0"><i class="bi bi-three-dots"></i></button>
+                </div>
+                
+                <h5 class="mt-3 mb-0">Employee</h5>
+                <small class="text-muted mb-2">Basic Access</small>
+                <p class="mb-0 fw-bold">0 users</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+        <form class="needs-validation" novalidate>
+            <div class="input-group">
+                <span class="input-group-text" style="background-color: #1f2a40; border-color: #3b5070;">
+                    <i class="bi bi-search text-secondary"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Search users by name, email, or department..." aria-label="Buscar" required
+                       style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                <button class="btn btn-outline-secondary text-white" type="submit" style="border-color: #3b5070;">
+                    <i class="bi bi-funnel me-1"></i> Filter
+                </button>
+                <div class="invalid-feedback">
+                    El campo de búsqueda es requerido para filtrar.
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="card p-0 shadow-sm" style="background-color: #2a3c58; border: none;">
+        <div class="table-responsive">
+            <table class="table table-borderless align-middle" style="color: white;">
+                <thead style="border-bottom: 1px solid #3b5070;">
+                    <tr>
+                        <th class="text-muted small" style="width: 25%;">User</th>
+                        <th class="text-muted small" style="width: 15%;">Role</th>
+                        <th class="text-muted small" style="width: 20%;">Department</th>
+                        <th class="text-muted small" style="width: 10%;">Status</th>
+                        <th class="text-muted small" style="width: 15%;">Last Active</th>
+                        <th class="text-muted small" style="width: 15%;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="border-bottom: 1px solid #3b5070;">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle text-center me-2" style="width: 32px; height: 32px; line-height: 32px; background-color: #3b5998; font-weight: bold;">US</div>
+                                <div>
+                                    <strong class="d-block">User Name</strong>
+                                    <small class="text-muted">email@company.com</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge" style="background-color: #DC3545;">Admin</span></td>
+                        <td>Department Name</td>
+                        <td><span class="badge bg-success">Active</span></td>
+                        <td>Time Ago</td>
+                        <td>
+                            <button class="btn btn-sm text-white p-0 me-2" data-bs-toggle="modal" data-bs-target="#userModal" title="Edit"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm text-white p-0" title="Delete"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    
+                    <tr style="border-bottom: 1px solid #3b5070;">
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle text-center me-2" style="width: 32px; height: 32px; line-height: 32px; background-color: #4CAF50; font-weight: bold;">UG</div>
+                                <div>
+                                    <strong class="d-block">User Name</strong>
+                                    <small class="text-muted">email@company.com</small>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="badge" style="background-color: #6c757d;">Employee</span></td>
+                        <td>Department Name</td>
+                        <td><span class="badge bg-danger">Inactive</span></td>
+                        <td>Time Ago</td>
+                        <td>
+                            <button class="btn btn-sm text-white p-0 me-2" data-bs-toggle="modal" data-bs-target="#userModal" title="Edit"><i class="bi bi-pencil-square"></i></button>
+                            <button class="btn btn-sm text-white p-0" title="Delete"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color: #2a3c58; color: white; border: none;">
+            
+            <div class="modal-header" style="border-bottom: 1px solid #3b5070;">
+                <h5 class="modal-title" id="userModalLabel">Agregar/Editar Usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar" style="filter: invert(1);"></button>
+            </div>
+            
+            <form class="needs-validation" novalidate>
+                <div class="modal-body">
+                    
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="userName" required 
+                               style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <div class="invalid-feedback">El nombre es obligatorio.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="userEmail" required 
+                               style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <div class="invalid-feedback">El email es obligatorio y debe ser válido.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="userRole" class="form-label">Rol</label>
+                        <select class="form-select" id="userRole" required
+                                style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <option value="" disabled selected>Selecciona un rol</option>
+                            <option value="Admin" style="background-color: #2a3c58;">Admin</option>
+                            <option value="Manager" style="background-color: #2a3c58;">Manager</option>
+                            <option value="Employee" style="background-color: #2a3c58;">Employee</option>
+                        </select>
+                        <div class="invalid-feedback">Debe seleccionar un rol.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="userDepartment" class="form-label">Departamento</label>
+                        <select class="form-select" id="userDepartment"
+                                style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <option value="" disabled selected>Selecciona un departamento</option>
+                            <option value="Eng" style="background-color: #2a3c58;">Engineering</option>
+                            <option value="Sales" style="background-color: #2a3c58;">Sales</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check form-switch mt-4">
+                        <input class="form-check-input" type="checkbox" id="userStatus" checked>
+                        <label class="form-check-label" for="userStatus">Cuenta Activa</label>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer" style="border-top: 1px solid #3b5070;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #6c757d; border: none;">Cancelar</button>
+                    <button type="submit" class="btn text-white" style="background-color: #3b5998;">Guardar Usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

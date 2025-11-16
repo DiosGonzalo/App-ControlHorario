@@ -1,0 +1,233 @@
+<div class="container-fluid p-4" style="background-color: #1f2a40; min-height: 100vh;">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h1 class="text-white mb-1">Settings</h1>
+            <p class="text-secondary mb-0">Configure system preferences and user application settings</p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12">
+
+            <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+                <h5 class="text-white mb-4 d-flex align-items-center">
+                    <i class="bi bi-gear-fill me-2 text-primary"></i> General Settings
+                </h5>
+                
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label for="companyName" class="form-label text-white">Nombre Compañía</label>
+                        <small class="d-block text-muted">Aparecerá en reportes y la aplicación.</small>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="companyName" value="TechCorp Inc." 
+                               style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label for="timeZone" class="form-label text-white">Zona Horaria</label>
+                        <small class="d-block text-muted">Timezone that this default uses</small>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select" id="timeZone" style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <option style="background-color: #2a3c58;">(UTC-05:00) Eastern Time (US & Canada)</option>
+                        </select>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label for="dateFormat" class="form-label text-white">Date Format</label>
+                        <small class="d-block text-muted">Choose how dates are displayed</small>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-select" id="dateFormat" style="background-color: #1f2a40; border-color: #3b5070; color: white;">
+                            <option style="background-color: #2a3c58;">DD/MM/YYYY</option>
+                            <option style="background-color: #2a3c58;">MM/DD/YYYY</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+                <h5 class="text-white mb-4 d-flex align-items-center">
+                    <i class="bi bi-clock-fill me-2 text-warning"></i> Attendance Settings
+                </h5>
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label for="lateGracePeriod" class="form-label text-white">Tolerancia Tardanza</label>
+                        <small class="d-block text-muted">Tiempo máximo para registrarse tarde (en minutos).</small>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <input type="number" class="form-control me-2" id="lateGracePeriod" value="15" min="0" 
+                               style="max-width: 80px; background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <span class="text-muted">min</span>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Margen extra-time</label>
+                        <small class="d-block text-muted">Permitir check-out un poco tarde del horario.</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="extraTimeMargin" checked>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Auto Check-out</label>
+                        <small class="d-block text-muted">Automatically check out users at end of shift.</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="autoCheckout">
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Location Tracking</label>
+                        <small class="d-block text-muted">Require location verification on check-in.</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="locationTracking" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+                <h5 class="text-white mb-4 d-flex align-items-center">
+                    <i class="bi bi-bell-fill me-2 text-info"></i> Notifications
+                </h5>
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Email Notifications</label>
+                        <small class="d-block text-muted">Send alerts via email</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Push Notifications</label>
+                        <small class="d-block text-muted">Send mobile app notifications</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="pushNotifications" checked>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Late Check-in Alerts</label>
+                        <small class="d-block text-muted">Notify managers of late arrivals</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="lateCheckinAlerts" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+                <h5 class="text-white mb-4 d-flex align-items-center">
+                    <i class="bi bi-shield-lock-fill me-2 text-danger"></i> Security
+                </h5>
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Two-Factor Authentication</label>
+                        <small class="d-block text-muted">Require 2FA for all admin logins</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="twoFactorAuth" checked>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label for="sessionTimeout" class="form-label text-white">Session Timeout (minutes)</label>
+                        <small class="d-block text-muted">Auto-logout after inactivity</small>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <input type="number" class="form-control me-2" id="sessionTimeout" value="30" min="5" 
+                               style="max-width: 80px; background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <span class="text-muted">min</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card p-4 shadow-sm mb-4" style="background-color: #2a3c58; border: none;">
+                <h5 class="text-white mb-4 d-flex align-items-center">
+                    <i class="bi bi-hdd-fill me-2 text-success"></i> Data & Backup
+                </h5>
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label class="form-label text-white">Automatic Backups</label>
+                        <small class="d-block text-muted">Daily backup of application data</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <div class="form-check form-switch d-inline-block">
+                            <input class="form-check-input" type="checkbox" id="automaticBackups" checked>
+                        </div>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="row mb-3 align-items-center">
+                    <div class="col-md-6">
+                        <label for="dataRetention" class="form-label text-white">Data Retention (months)</label>
+                        <small class="d-block text-muted">Maximum period data is kept</small>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-center">
+                        <input type="number" class="form-control me-2" id="dataRetention" value="24" min="6" 
+                               style="max-width: 80px; background-color: #1f2a40; border-color: #3b5070; color: white;">
+                        <span class="text-muted">months</span>
+                    </div>
+                </div>
+                <hr style="border-top: 1px solid #3b5070;">
+
+                <div class="d-flex justify-content-end gap-3">
+                    <button class="btn btn-secondary" style="background-color: #31313a; border-color: #3b5070;">Download Backup</button>
+                    <button class="btn btn-danger" style="background-color: #DC3545; border: none;">Clear Old Data</button>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-end gap-3 py-3 sticky-bottom" style="background-color: #1f2a40; border-top: 1px solid #3b5070;">
+                <button class="btn btn-secondary" style="background-color: #6c757d; border: none;">Cancel</button>
+                <button class="btn text-white" style="background-color: #3b5998;">Save Changes</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
