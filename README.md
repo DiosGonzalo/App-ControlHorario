@@ -1,59 +1,21 @@
-# ControlHorario
+# 🚀 HR Management System - ControlHorario
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+> Una solución moderna de gestión de recursos humanos y asistencia, diseñada con una estética oscura elegante y enfocada en la usabilidad.
 
-## Development server
+Este proyecto es una aplicación de administración para la gestión centralizada de empleados, horarios, modalidades de trabajo, ausencias y auditoría de actividad. Está construido con **Angular** para el *frontend* y utiliza **Bootstrap 5** para un diseño responsivo y consistente.
 
-To start a local development server, run:
+## ✨ Características Principales
 
-```bash
-ng serve
-```
+El sistema está dividido en un **Layout Principal** con un Sidebar fijo y las siguientes secciones clave:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Módulos de Gestión
+* **Dashboard:** Monitoreo en tiempo real de asistencia, llegadas tarde y métricas departamentales.
+* **Usuarios y Roles:** Gestión completa de empleados, asignación de roles (Admin, Manager, Employee) y permisos.
+* **Departamentos:** Creación, edición y asignación de responsables para las estructuras organizacionales.
+* **Horarios (Schedule Management):** Creación de plantillas de turnos (shifts), asignación de horarios y gestión de rangos de tiempo.
+* **Modalidades:** Administración de ubicaciones y tipos de trabajo (Remoto, Presencial, Híbrido, Ubicaciones Autorizadas).
+* **Gestión de Ausencias:** Solicitud y aprobación de vacaciones, asuntos propios y bajas por enfermedad, con balance de días disponibles.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Módulos de Auditoría y Configuración
+* **Activity Log:** Registro detallado y auditable de todas las acciones del sistema (check-ins, cambios de configuración, cambios de rol).
+* **Settings (Configuración):** Ajustes globales de la aplicación, incluyendo zona horaria, formatos, tolerancia de asistencia, notificaciones y seguridad (2FA, sesión).
